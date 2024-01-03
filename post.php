@@ -14,11 +14,11 @@
     ?>
     </div>
     
-   <table style="border: 2px solid black; width: auto;" align="center">
+   <table style="border: 2px solid black; width: 25%;" align="center">
         <tr><td colspan="2" style="background-color: rgb(76, 194, 241);">แสดงความคิดเห็น</td></tr>
-        <tr><td><textarea name="text" id="" cols="20" rows="3"></textarea></td></tr>
+        <tr><td><textarea name="text" id="" cols="45" rows="5"></textarea></td></tr>
         <tr><td colspan="2" align="center"><input type="submit" value="ส่งข้อความ" ></td></tr>
     </table>
-    
+    <div style="text-align: center;"><a href="index.html">กลับไปหน้าหลัก</a></div>
 </body>
 </html>
