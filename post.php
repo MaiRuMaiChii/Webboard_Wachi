@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Webboard Shabu</h1>
+    <hr>
+    <div style="text-align: center;">
+    <?php 
+    echo "ต้องการดูกระทู้หมายเลข $_GET[id]";
+    ?>
+    </div>
+    
+   <table style="border: 2px solid black; width: auto;" align="center">
+        <tr><td colspan="2" style="background-color: rgb(76, 194, 241);">แสดงความคิดเห็น</td></tr>
+        <tr><td><textarea name="text" id="" cols="20" rows="3"></textarea></td></tr>
+        <tr><td colspan="2" align="center"><input type="submit" value="ส่งข้อความ" ></td></tr>
+    </table>
+    
+</body>
+</html>
