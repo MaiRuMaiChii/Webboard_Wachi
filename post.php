@@ -10,7 +10,14 @@
     <hr>
     <div style="text-align: center;">
     <?php 
-    echo "ต้องการดูกระทู้หมายเลข $_GET[id]";
+    echo "ต้องการดูกระทู้หมายเลข $_GET[id]"; 
+    ?>
+    <?php
+        $id = $_GET['id'];
+        if (($id % 2) == 0)
+            echo "<BR>เป็นกระทู้หมายเลขคู่ ";
+        else
+            echo "<BR>เป็นกระทู้หมายเลขคี่";
     ?>
     </div>
     
