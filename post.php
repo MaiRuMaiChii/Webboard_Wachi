@@ -19,6 +19,6 @@
         <tr><td><textarea name="text" id="" cols="45" rows="5"></textarea></td></tr>
         <tr><td colspan="2" align="center"><input type="submit" value="ส่งข้อความ" ></td></tr>
     </table>
-    <div style="text-align: center;"><a href="index.html">กลับไปหน้าหลัก</a></div>
+    <div style="text-align: center;"><a href="index.php">กลับไปหน้าหลัก</a></div>
 </body>
 </html>
