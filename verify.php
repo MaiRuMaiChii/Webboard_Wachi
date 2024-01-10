@@ -8,10 +8,18 @@
 <body>
     <h1 style="text-align: center;">Webboard Shabu</h1>
     <hr>
-    <div style="text-align: center;">เข้าสู่ระบบด้วย <br>
-        Login = <?php echo $_POST['Login']?><br>
-        Password = <?php echo $_POST['pwd']?>
+    <div style="text-align: center;">
+    <?php
+        $login = $_POST['Login'];
+        $pwd = $_POST['pwd'];
+        if ($login == "admin" && $pwd == "ad1234"){
+            echo "ยินดีตอนรับคุณ ADMIN";}
+        elseif ($login == "member" && $pwd == "mem1234"){
+            echo "ยินดีต้อนรับคุณ MEMBER";}
+        else{
+            echo "ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง";}
+    ?>
     </div>
-    
+    <div style="text-align: center;"><a href="index.php">กลับไปหน้าหลัก</a></div>
 </body>
 </html>
