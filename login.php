@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(isset($_SESSION['id'])){
+        header("location:index.php");
+        die();
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +14,7 @@
     <title>login</title>
 </head>
 <body>
+    
     <h1 style="text-align: center;">Webboard Shabu</h1>
     <hr>
     <form action="verify.php " method="post">
@@ -18,6 +27,6 @@
     </table>
 </form>
     <br> 
-    <div style="text-align: center;">ถ้ายังไม่ได้เป็นสมาชิก <a href="register.html">กรุณาสมัครสมาชิก</a></div>
+    <div style="text-align: center;">ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาชิก</a></div>
 </body>
 </html>
