@@ -39,7 +39,7 @@
                         <form action="verify.php " method="post">
                             <div class="form-group">
                                 <label for="login" class="form-label">Login : </label>
-                                <input type="text" name="Login" id="login" class="form-control">
+                                <input type="text" name="login" id="login" class="form-control">
                             </div>
 
                             <div class="form-group mt-2">
@@ -47,7 +47,7 @@
                                 <input type="password" name="pwd" id="pwd" class="form-control">
                             </div>
                             <div class="form-group mt-3 text-center" >
-                                <input type="submit" value="Login" class="btn btn-secondary">
+                                <input type="submit" value="login" class="btn btn-secondary">
                                 <input type="reset" value="Reset" class="btn btn-danger">   
                             </div>
                         </form>
