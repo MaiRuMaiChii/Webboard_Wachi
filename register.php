@@ -9,6 +9,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        function OnBlurpwd(){
+            let pwd1=document.getElementById("pwd1");
+            let pwd2=document.getElementById("pwd2");
+            if(pwd1.value!==pwd2.value){
+                alert("รหัสผ่านไม่ตรงกัน")
+                pwd2.value="";
+            }
+        }
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -49,9 +59,14 @@
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <label for="ps" class="col-lg-3 col-form-label">รหัสผ่าน : </label>  
+                            <label for="pwd1" class="col-lg-3 col-form-label">รหัสผ่าน : </label>  
                             <div class="col-lg-9">
-                                    <input id="ps" type="password" name="pwd" class="form-control" require>
+                                    <input id="pwd1" type="password" name="pwd" class="form-control" require>
+                            </div>
+                            <div class="row mt-3">
+                            <label for="pwd2" class="col-lg-3 col-form-label">ใส่รหัสผ่านซ้ำ : </label>  
+                            <div class="col-lg-9">
+                                    <input id="pwd2" type="password" name="pwd" onblur="OnBlurpwd()" class="form-control" require>
                             </div>
                         </div>
                         <div class="row mt-3">
