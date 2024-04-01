@@ -23,29 +23,27 @@
     <?php
         include "nav.php"
     ?>
-    <div class="row mt-4">
-        <div class="col-lg-4 col-md-3 col-sm-2 col-1"></div>
-        <div class="col-lg-4 col-md-6 col-sm-8 col-10">
-            <?php
-                if(isset($_SESSION['error'])){
-                    echo "<div class='alert alert-danger'>ชื่อบัญชีหรือรหัสผ่านไม่ถูกต้อง</div>";
-                    unset($_SESSION['error']);
-                }
-            ?>
-
-            <div class="card bg-light text-dark">
+<div class="row mt-4">
+            <div class="col-lg-4 col-md-3 col-sm-2 col-1"></div>
+            <div class="col-lg-4 col-md-6 col-sm-8 col-10">
+                <?php
+                if (isset($_SESSION['error'])) { 
+                echo "<div class='alert alert-danger'>ชื่อรหัสผ่านผิด</div>";
+                unset($_SESSION['error']);
+                 }
+                ?>
+                <div class="card text-dark bg-light ">
                     <div class="card-header">เข้าสู่ระบบ</div>
                     <div class="card-body">
-                        <form action="verify.php " method="post">
+                        <form action="verify.php" method="post">
                             <div class="form-group">
-                                <label for="login" class="form-label">Login : </label>
-                                <input type="text" name="login" id="login" class="form-control">
+                                <label for="login" class="form-label">Login</label>
+                                <input type="text" class="form-control" name="login" id="login" required>
                             </div>
-
                             <div class="form-group mt-2">
-                                <label for="pwd" class="dorm-label">Password : </label> 
+                                <label for="pwd" class="form-label">Password</label>
                                 <div class="input-group">
-                                    <input type="password" name="pwd" id="pwd"  class="form-control">
+                                    <input type="password" class="form-control" name="password" id="pwd" required>
                                     <span class="input-group-text" onclick="password_show_hide()">
                                         <i class="bi bi-eye-fill" id="show_eye"></i>
                                         <i class="bi bi-eye-slash-fill d-none" id="hide_eye"></i>
@@ -53,19 +51,17 @@
                                 </div>
                                 
                             </div>
-                            <div class="form-group mt-3 text-center" >
-                                <input type="submit" value="login" class="btn btn-secondary">
-                                <input type="reset" value="Reset" class="btn btn-danger">   
+                            <div class="form-group text-center mt-3">
+                                <input type="submit" value="Login" class="btn btn-success btn-sm">
+                                <input type="reset" value="Reset" class="btn btn-danger btn-sm">
                             </div>
                         </form>
                     </div>
+                </div>
+                <div class="text-center mt-2"><a href="register.php">สมัครสมาชิก</a></div>
             </div>
+            <div class="col-lg-4 col-md-3 col-sm-2 col-1"></div>
         </div>
-        <div class="col-lg-4 col-md-3 col-sm-2 col-1"></div>
-    </div>
-    <br> 
-    <div style="text-align: center;">ถ้ายังไม่ได้เป็นสมาชิก <a href="register.php">กรุณาสมัครสมาชิก</a></div>
-    </div>
     <script>
         function password_show_hide(){
             let x=document.getElementById("pwd");
